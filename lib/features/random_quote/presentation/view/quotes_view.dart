@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecommerce/core/utils/image_manager.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class QuotesView extends ConsumerStatefulWidget {
@@ -13,7 +14,7 @@ class _QuotesViewState extends ConsumerState<QuotesView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("quote"),
+        child: Image.asset(ImageAssets.ministry),
       ),
     );
   }
