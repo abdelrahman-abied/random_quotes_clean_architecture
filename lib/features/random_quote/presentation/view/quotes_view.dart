@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce/core/constants/app_routes.dart';
+import 'package:flutter_ecommerce/core/constants/app_strings.dart';
 import 'package:flutter_ecommerce/core/constants/constants.dart';
 import 'package:flutter_ecommerce/core/utils/image_manager.dart';
 import 'package:flutter_ecommerce/features/favourite_quotes/presentation/view/favourite_quotes_view.dart';
+import 'package:flutter_ecommerce/features/random_quote/domain/entities/quote.dart';
+import 'package:flutter_ecommerce/features/random_quote/presentation/widgets/quotes_contenct.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class QuotesView extends ConsumerStatefulWidget {
@@ -16,16 +19,19 @@ class _QuotesViewState extends ConsumerState<QuotesView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: InkWell(
-          onTap: () => Constants.showToast(msg: "name"),
-          // Navigator.pushNamed(context, Routes.favouriteQuotesRoutes),
-          child: const Text(
-            "Facebook",
-            style: TextStyle(
-              color: Colors.black,
-            ),
-          ),
+      body: Scaffold(
+        appBar: AppBar(
+          title: const Text(AppStrings.appName),
+        ),
+        body: Column(
+          children: [
+            QuotesContent(
+                quote: Quote(
+                    author: "author",
+                    id: 1,
+                    content: "content",
+                    permalink: "permalink")),
+          ],
         ),
       ),
     );
