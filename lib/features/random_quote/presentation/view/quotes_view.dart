@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommerce/core/constants/app_routes.dart';
 import 'package:flutter_ecommerce/core/constants/app_strings.dart';
-import 'package:flutter_ecommerce/core/constants/constants.dart';
-import 'package:flutter_ecommerce/core/utils/image_manager.dart';
-import 'package:flutter_ecommerce/features/favourite_quotes/presentation/view/favourite_quotes_view.dart';
 import 'package:flutter_ecommerce/features/random_quote/domain/entities/quote.dart';
 import 'package:flutter_ecommerce/features/random_quote/presentation/widgets/quotes_contenct.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -24,13 +20,15 @@ class _QuotesViewState extends ConsumerState<QuotesView> {
           title: const Text(AppStrings.appName),
         ),
         body: Column(
-          children: [
+          children: const [
             QuotesContent(
-                quote: Quote(
-                    author: "author",
-                    id: 1,
-                    content: "content",
-                    permalink: "permalink")),
+              quote: Quote(
+                author: "author",
+                id: 1,
+                content: "content",
+                permalink: "permalink",
+              ),
+            ),
           ],
         ),
       ),
