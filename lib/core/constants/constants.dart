@@ -5,6 +5,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 
 class Constants {
   static const String imagePath = 'assets/images';
+  static const String cachedQuoteKey = "CACHED_QUOTE";
   static void showErrorDialog(
       {required BuildContext context, required String msg}) {
     showDialog(
