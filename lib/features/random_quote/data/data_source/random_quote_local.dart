@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-import 'package:flutter_ecommerce/core/constants/constants.dart';
-import 'package:flutter_ecommerce/core/error/exceptions.dart';
-import 'package:flutter_ecommerce/features/random_quote/data/model/quote_model.dart';
-import 'package:flutter_ecommerce/features/random_quote/domain/entities/quote.dart';
+import '../../../../core/constants/constants.dart';
+import '../../../../core/error/exceptions.dart';
+import '../model/quote_model.dart';
+import '../../domain/entities/quote.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class RandomQuoteLocal {

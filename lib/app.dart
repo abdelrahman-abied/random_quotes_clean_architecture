@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommerce/core/constants/app_strings.dart';
-import 'package:flutter_ecommerce/features/random_quote/presentation/view/quotes_view.dart';
+import 'core/constants/app_strings.dart';
+import 'features/random_quote/presentation/view/quotes_view.dart';
 import 'core/theme/app_theme.dart';
+import 'core/utils/app_routes.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -14,8 +15,7 @@ class MyApp extends StatelessWidget {
       // initialRoute: Routes.initalRoutes,
       // routes: routes,
 
-      home: const QuotesView(),
-      // onGenerateRoute: AppRoutes.onGenratedRoute,
+      onGenerateRoute: AppRoutes.onGenratedRoute,
     );
   }
 }

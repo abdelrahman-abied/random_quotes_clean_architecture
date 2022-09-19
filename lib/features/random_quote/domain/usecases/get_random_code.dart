@@ -1,14 +1,14 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_ecommerce/core/use_cases/usecase.dart';
-import 'package:flutter_ecommerce/features/random_quote/domain/entities/quote.dart';
-import 'package:flutter_ecommerce/features/random_quote/domain/repositories/quotes_repository.dart';
+import '../../../../core/use_cases/usecase.dart';
+import '../entities/quote.dart';
+import '../repositories/quotes_repository.dart';
 
 import '../../../../core/error/failure.dart';
 
-class GetRandomQuote implements UseCase<Quote, NoParams> {
+class GetRandomQuoteUseCase implements UseCase<Quote, NoParams> {
   final QuoteRepository quoteRepo;
 
-  GetRandomQuote({required this.quoteRepo});
+  GetRandomQuoteUseCase({required this.quoteRepo});
 
   @override
   Future<Either<Failure, Quote>> call(NoParams params) =>

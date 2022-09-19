@@ -1,12 +1,12 @@
-import 'package:flutter_ecommerce/core/error/exceptions.dart';
-import 'package:flutter_ecommerce/core/network/network_info.dart';
-import 'package:flutter_ecommerce/features/random_quote/data/data_source/random_quote_local.dart';
-import 'package:flutter_ecommerce/features/random_quote/data/data_source/random_quote_remote.dart';
-import 'package:flutter_ecommerce/core/error/failure.dart';
 import 'package:dartz/dartz.dart';
-import 'package:flutter_ecommerce/features/random_quote/domain/repositories/quotes_repository.dart';
 
+import '../../../../core/error/exceptions.dart';
+import '../../../../core/error/failure.dart';
+import '../../../../core/network/network_info.dart';
 import '../../domain/entities/quote.dart';
+import '../../domain/repositories/quotes_repository.dart';
+import '../data_source/random_quote_local.dart';
+import '../data_source/random_quote_remote.dart';
 
 class QuoteRepoImpl implements QuoteRepository {
   final NetworkInfo networkInfo;
